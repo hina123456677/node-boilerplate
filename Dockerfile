@@ -13,11 +13,5 @@ RUN npm install -g pnpm && pnpm install
 # Copy the rest of the source code
 COPY . .
 
-# Build TypeScript
-RUN pnpm exec tsc
-
-# Expose the port your app will run on
-EXPOSE 3000
-
 # Command to run the app
 CMD ["node", "dist/main.js"]

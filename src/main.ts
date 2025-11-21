@@ -10,7 +10,7 @@ app.use(express.json())
 
 const allowed = process.env.CORS_ORIGIN
   ? process.env.CORS_ORIGIN.split(",")
-  : ["http://localhost:3050"]
+  : ["http://localhost:3000"]
 
 app.use(
   cors({

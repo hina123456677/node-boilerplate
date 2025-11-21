@@ -9,6 +9,6 @@ services:
       - ./:/app          # Mount local project folder
       - /app/node_modules  # Keep container's node_modules separate
     ports:
-      - "3050:3000"      # Map container port 3000 to host
+      - "3050:8000"      # Map container port 3000 to host
     command: sh -c "npm install && npm run dev" # dev script for local dev
 

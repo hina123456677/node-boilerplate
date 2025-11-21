@@ -2,5 +2,5 @@ services:
   node-app:
     image: node-boilerplate:latest   # Your custom image name
     ports:
-      - "1000:1000"
+      - "1000:8001"
     restart: always

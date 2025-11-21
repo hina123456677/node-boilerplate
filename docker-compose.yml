@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  node-app:
+    image: node:20-alpine
+    container_name: node-app
+    working_dir: /app
+    volumes:
+      - ./:/app          # Mount local project folder
+      - /app/node_modules  # Keep container's node_modules separate
+    ports:
+      - "3050:3000"      # Map container port 3000 to host
+    command: sh -c "npm install && npm run dev" # dev script for local dev
+
